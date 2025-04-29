@@ -1,5 +1,6 @@
 import { Recipe } from "../types/reciepetypes"
 import "../styles/Card.css"
+import { useNavigate } from "react-router-dom"
 
 
 interface Props{
@@ -7,7 +8,9 @@ interface Props{
     error:string| null
 }
 export default function Card({data,error}:Props) {
-  return (
+  const navigate=useNavigate()
+  
+    return (
     <div className="container">
        {error ? <p>{error}</p> : 
         <div className="card-wrapper">
@@ -29,7 +32,7 @@ export default function Card({data,error}:Props) {
 
                 <div className="card-footer">
                     <p>Review-count: {item.reviewCount}</p>
-                    <button>Full Recipe</button>
+                    <button onClick={()=>navigate(`/recipe/${item.id}`)}>Full Recipe</button>
                 </div>
 
             </div>

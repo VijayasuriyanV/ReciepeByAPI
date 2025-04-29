@@ -3,12 +3,14 @@ import {useParams} from "react-router-dom";
 import "./ReciepeDetails.css";
 import {Api} from "../G_api";
 import {Recipe} from "../types/reciepetypes";
+import { useNavigate } from "react-router-dom";
 
 const ReciepeDetails = () => {
   const {id} = useParams();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const navigate=useNavigate()
 
   useEffect(() => {
     const fetchRecipe = async () => {
@@ -88,6 +90,7 @@ const ReciepeDetails = () => {
           </ol>
         </article>
       </section>
+      <button className="recipe-button" onClick={()=>navigate("/")}>See More Recipes</button>
     </main>
   );
 };
