@@ -13,7 +13,7 @@ const ReciepeDetails = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await fetch(`${Api}/2`);
+        const response = await fetch(`${Api}/${id}`);
         if (!response.ok) throw new Error("Failed to fetch recipe.");
         const data: Recipe = await response.json();
         setRecipe(data);
