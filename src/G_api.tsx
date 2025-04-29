@@ -1,1 +1,1 @@
-export const Api: string = "https://dummyjson.com/docs/recipes";
+export const Api: string = "'https://dummyjson.com/recipes'";
