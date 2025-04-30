@@ -29,11 +29,11 @@ const ReciepeDetails = () => {
     fetchRecipe();
   }, [id]);
 
-  if (loading) return <p>Loading recipe...</p>;
+  if (loading) return <p className="loading">Loading recipe...</p>;
   if (error || !recipe) return <p>{error || "Recipe not found."}</p>;
 
   return (
-    <main className="recipe-container" style={{padding: "3.5rem 0"}}>
+    <main className="recipe-container">
       <section className="row-1">
         <figure className="recipe-image">
           <img src={recipe.image} alt={recipe.name} />
@@ -94,6 +94,7 @@ const ReciepeDetails = () => {
           </ol>
         </article>
       </section>
+
       <button className="recipe-button" onClick={() => navigate("/")}>
         See More Recipes
       </button>
