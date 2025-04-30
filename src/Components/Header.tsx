@@ -71,7 +71,7 @@ const Header: React.FC = () => {
 
         <ul className="navbar-links">
           <li>
-            <a href="#" className="active">
+            <a href="#" className="active" onClick={()=>navigate("/")}>
               Home
             </a>
           </li>
