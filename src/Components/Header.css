@@ -1,13 +1,13 @@
 .container-navbar {
   width: 100dvw;
-  height: 10vh;
+  height: 6vh;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
   margin: 0;
-
+  bottom: 0;
   position: fixed;
   top: 0;
   left: 0;

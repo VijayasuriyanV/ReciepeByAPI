@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <SlidingBanner />
+      {/* <SlidingBanner /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipe/:id" element={<ReciepeDetails />} />
