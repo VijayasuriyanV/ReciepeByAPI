@@ -1,0 +1,234 @@
+
+    .container-navbar {
+      width: 100dvw;
+      height: 10vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000; 
+    }
+    
+    .navbar {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bold;
+    }
+    
+    .navbar-title {
+      flex: 1;
+      font-size: 1.4rem;
+      text-align: left;
+      color:orange;
+    }
+    
+    .navbar-links {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .navbar-user {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .icon {
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: darkblue;
+      gap:10px;
+    }
+    
+    .navbar-link {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .navbar-link:hover,
+    .dropdown > a:hover,
+    .dropdown-menu li a:hover,
+    .mega-menu a:hover {
+      color: orange;
+    }
+    
+    
+    .dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      padding: 10px 0;
+      display: none;
+      flex-direction: column;
+      min-width: 120px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+    
+    .dropdown-menu li {
+      padding: 5px 15px;
+    }
+    
+    .dropdown-menu li a {
+      color: darkblue;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .dropdown:hover .dropdown-menu {
+      display: flex;
+    }
+    
+   
+    .mega-dropdown {
+      position: relative;
+    }
+    
+    .mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      min-width: 200px;
+      color: white;
+    }
+    
+    .mega-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .mega-column h4 {
+      margin: 0;
+      color: darkblue;
+      font-size: 1rem;
+    }
+    
+    .mega-menu a {
+      color: darkblue;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+
+    .mega-dropdown:hover .mega-menu {
+      display: block;
+    }
+        
+
+    /* /////////////////////////////// */
+
+    /* .header-container {
+      width: 100%;
+      height: 60px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .header {
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .logo {
+      color: orange;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      position: relative;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: gray;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a.active,
+    .nav-links a:hover {
+      color: red;
+    }
+    
+    
+    .dropdown-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 10px 0;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background-color: transparent;
+    }
+    
+    .dropdown-content li a {
+      color: gray;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+    
+    .header-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .icon {
+      font-size: 1.1rem;
+      color: gray;
+      cursor: pointer;
+    }
+     */
