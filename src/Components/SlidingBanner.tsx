@@ -200,7 +200,7 @@ const SlidingBanner = () => {
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
-    }, 5000); // Slide every 5 seconds
+    }, 3000); // Slide every 5 seconds
 
     return () => clearInterval(interval);
   }, [data]);

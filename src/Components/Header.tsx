@@ -56,8 +56,10 @@
 import React from "react";
 import {FaUser, FaSearch, FaShoppingCart} from "react-icons/fa";
 import "./Header.css";
+import {useNavigate} from "react-router-dom";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <div className="container-navbar">
       <div className="navbar">
