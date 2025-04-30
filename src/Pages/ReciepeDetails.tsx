@@ -40,7 +40,7 @@ const ReciepeDetails = () => {
         </figure>
 
         <section className="recipe-details">
-          <h1>{recipe.name}</h1>
+          <h1 className="ReciepeName">{recipe.name}</h1>
           <p>
             <strong>Cuisine:</strong> {recipe.cuisine}
           </p>
@@ -76,7 +76,9 @@ const ReciepeDetails = () => {
           <h3 className="DetailsHead">Ingredients</h3>
           <ul>
             {recipe.ingredients.map((item, index) => (
-              <li key={index}>{item}</li>
+              <li key={index} style={{listStyle: "none"}}>
+                {item}
+              </li>
             ))}
           </ul>
         </article>
@@ -85,7 +87,9 @@ const ReciepeDetails = () => {
           <h3 className="DetailsHead">Instructions</h3>
           <ol>
             {recipe.instructions.map((step, index) => (
-              <li key={index}>{step}</li>
+              <li key={index} style={{listStyle: "none"}}>
+                {step}
+              </li>
             ))}
           </ol>
         </article>

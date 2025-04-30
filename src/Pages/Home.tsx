@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Card from "../Components/Card";
 import {Api} from "../G_api";
 import {Recipe} from "../types/reciepetypes";
+import SlidingBanner from "../Components/SlidingBanner";
 export default function Home() {
   const [data, setData] = useState<Recipe[] | null>(null);
   const [error, setError] = useState<string>("");
@@ -22,10 +23,11 @@ export default function Home() {
     fetchData();
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   return (
-    <div style={{padding: "3.5rem 0"}}>
+    <div style={{paddingTop: "3.5rem", fontFamily: "Arial, sans-serif"}}>
+      <SlidingBanner />
       <Card data={data} error={error} />
     </div>
   );
