@@ -53,36 +53,56 @@
 
 // export default Header;
 
-
-import React from 'react';
-import { FaUser ,FaSearch, FaShoppingCart} from 'react-icons/fa';
-import './Header.css';
+import React from "react";
+import {FaUser, FaSearch, FaShoppingCart} from "react-icons/fa";
+import "./Header.css";
 
 const Header: React.FC = () => {
   return (
     <div className="container-navbar">
       <div className="navbar">
-        <h3 className="navbar-title">Best Receipe</h3>
+        <h3 className="navbar-title">
+          <a id="title" href="/" style={{textDecoration: "none"}}>
+            Best Receipe
+          </a>
+        </h3>
 
         <ul className="navbar-links">
-        <li><a href="#" className="active">Home</a></li>
-        <li><a href="#">Services</a></li>
+          <li>
+            <a href="#" className="active">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
           <li className="dropdown">
-          
             <a href="#">Tags </a>
             <ul className="dropdown-menu">
-              <li><a href="#">Breakfast</a></li>
-              <li><a href="#">Lunch</a></li>
-              <li><a href="#">Dinner</a></li>
+              <li>
+                <a href="#">Breakfast</a>
+              </li>
+              <li>
+                <a href="#">Lunch</a>
+              </li>
+              <li>
+                <a href="#">Dinner</a>
+              </li>
             </ul>
           </li>
 
           <li className="dropdown">
             <a href="#">Cuisine </a>
             <ul className="dropdown-menu">
-              <li><a href="#">Indian</a></li>
-              <li><a href="#">Italian</a></li>
-              <li><a href="#">Mexican</a></li>
+              <li>
+                <a href="#">Indian</a>
+              </li>
+              <li>
+                <a href="#">Italian</a>
+              </li>
+              <li>
+                <a href="#">Mexican</a>
+              </li>
             </ul>
           </li>
 
@@ -102,8 +122,8 @@ const Header: React.FC = () => {
         </ul>
 
         <div className="navbar-user">
-        <FaSearch className="icon" />
-         <FaShoppingCart className="icon" />
+          <FaSearch className="icon" />
+          <FaShoppingCart className="icon" />
           <FaUser className="icon user-icon" />
         </div>
       </div>
@@ -112,6 +132,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
-
-

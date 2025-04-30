@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Api } from "../G_api";
-import { Recipe } from "../types/reciepetypes";
+import {useState, useEffect} from "react";
+import {Api} from "../G_api";
+import {Recipe} from "../types/reciepetypes";
 
 const SlidingBanner = () => {
   const [data, setData] = useState<Recipe[]>([]);
@@ -11,13 +11,14 @@ const SlidingBanner = () => {
   // Inline styles
   const styles = {
     container: {
-      position: "relative" as const,
-      width: "100vw", // 100% of viewport width
-      height: "500px", // Increased height for better visual
+      margin: "-30px 0 0 calc(-50vw + 50%)",
+      // top, right, bottom, left
+      position: "relative" as React.CSSProperties["position"],
+      width: "100vw",
+      height: "500px",
       overflow: "hidden",
-      margin: "0", // Remove margins
-      marginLeft: "calc(-50vw + 50%)", // Full-width trick
     },
+
     slide: {
       width: "100%",
       height: "100%",
@@ -38,8 +39,7 @@ const SlidingBanner = () => {
       left: 0,
       width: "100%",
       height: "100%",
-      backgroundImage:
-        "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
+      backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)",
       opacity: 0.7,
     },
     content: {
@@ -169,9 +169,7 @@ const SlidingBanner = () => {
         recipeData = response;
       } else {
         // If neither, try to find an array in the response
-        const possibleArrays = Object.values(response).filter((val) =>
-          Array.isArray(val)
-        );
+        const possibleArrays = Object.values(response).filter((val) => Array.isArray(val));
         if (possibleArrays.length > 0) {
           recipeData = possibleArrays[0] as Recipe[];
         } else {
@@ -216,9 +214,7 @@ const SlidingBanner = () => {
   }
 
   if (data.length === 0) {
-    return (
-      <div style={styles.error}>No recipes found. Please try again later.</div>
-    );
+    return <div style={styles.error}>No recipes found. Please try again later.</div>;
   }
 
   const getSafeRecipe = (recipe: Recipe) => {
@@ -247,8 +243,7 @@ const SlidingBanner = () => {
           ...styles.slide,
           ...styles.activeSlide,
           backgroundImage: `url(${currentRecipe.image})`,
-        }}
-      >
+        }}>
         <div style={styles.overlay}></div>
         <div style={styles.content}>
           <h2 style={styles.title}>{currentRecipe.name}</h2>
@@ -258,8 +253,7 @@ const SlidingBanner = () => {
             </span>
             <span style={styles.detailItem}>🔥 {currentRecipe.difficulty}</span>
             <span style={styles.detailItem}>
-              ⏱️ {currentRecipe.cookTimeMinutes + currentRecipe.prepTimeMinutes}{" "}
-              min
+              ⏱️ {currentRecipe.cookTimeMinutes + currentRecipe.prepTimeMinutes} min
             </span>
           </div>
           <div style={styles.tagsContainer}>
@@ -275,26 +269,24 @@ const SlidingBanner = () => {
       {/* Navigation controls */}
       <button
         onClick={() => setCurrentIndex(prevIndex)}
-        style={{ ...styles.navButton, left: "20px" }}
+        style={{...styles.navButton, left: "20px"}}
         onMouseOver={(e) => {
           e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
         }}
         onMouseOut={(e) => {
           e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-        }}
-      >
+        }}>
         ‹
       </button>
       <button
         onClick={() => setCurrentIndex(nextIndex)}
-        style={{ ...styles.navButton, right: "20px" }}
+        style={{...styles.navButton, right: "20px"}}
         onMouseOver={(e) => {
           e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)";
         }}
         onMouseOut={(e) => {
           e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-        }}
-      >
+        }}>
         ›
       </button>
 

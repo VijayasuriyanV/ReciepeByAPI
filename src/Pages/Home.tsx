@@ -23,10 +23,10 @@ export default function Home() {
     fetchData();
   }, []);
 
-  console.log(data);
+  // console.log(data);
 
   return (
-    <div style={{padding: "3.5rem 0"}}>
+    <div style={{paddingTop: "3.5rem", fontFamily: "Arial, sans-serif"}}>
       <SlidingBanner />
       <Card data={data} error={error} />
     </div>
