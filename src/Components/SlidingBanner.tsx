@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import {Api} from "../G_api";
-import {Recipe} from "../types/reciepetypes";
+import {Recipe} from "../types/recipetypes";
 
 const SlidingBanner = () => {
   const [data, setData] = useState<Recipe[]>([]);
