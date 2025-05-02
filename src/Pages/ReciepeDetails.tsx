@@ -40,7 +40,7 @@ const ReciepeDetails = () => {
         </figure>
 
         <section className="recipe-details">
-          <h1 className="ReciepeName">{recipe.name}</h1>
+          <h1>{recipe.name}</h1>
           <p>
             <strong>Cuisine:</strong> {recipe.cuisine}
           </p>
@@ -62,34 +62,37 @@ const ReciepeDetails = () => {
           <p>
             <strong>Rating:</strong> ⭐ {recipe.rating} ({recipe.reviewCount} reviews)
           </p>
-          <p>
-            <strong>Tags:</strong> {recipe.tags.join(", ")}
-          </p>
-          <p>
-            <strong>Meal Type:</strong> {recipe.mealType.join(", ")}
-          </p>
+
+          <div className="badges">
+            {recipe.tags.map((tag, index) => (
+              <span key={index} className="badge">
+                {tag}
+              </span>
+            ))}
+            {recipe.mealType.map((type, index) => (
+              <span key={index} className="badge">
+                {type}
+              </span>
+            ))}
+          </div>
         </section>
       </section>
 
-      <section className="row-2 details">
-        <article className="Ingredients">
-          <h3 className="DetailsHead">Ingredients</h3>
+      <section className="details-section">
+        <article className="details-card">
+          <h3>Ingredients</h3>
           <ul>
             {recipe.ingredients.map((item, index) => (
-              <li key={index} style={{listStyle: "none"}}>
-                {item}
-              </li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </article>
 
-        <article className="Instruction">
-          <h3 className="DetailsHead">Instructions</h3>
+        <article className="details-card">
+          <h3>Instructions</h3>
           <ol>
             {recipe.instructions.map((step, index) => (
-              <li key={index} style={{listStyle: "none"}}>
-                {step}
-              </li>
+              <li key={index}>{step}</li>
             ))}
           </ol>
         </article>
