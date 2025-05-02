@@ -65,7 +65,7 @@ const Header: React.FC = () => {
       <div className="navbar">
         <h3 className="navbar-title">
           <a id="title" href="/" style={{textDecoration: "none"}}>
-            Best Receipe
+            Best Recipe
           </a>
         </h3>
 
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
                 <h4>Category</h4>
                 <a href="#">About Us</a>
                 <a href="#">Blog Post</a>
-                <a href="#">Receipe Post</a>
+                <a href="#">Recipe Post</a>
                 <a href="#">Contact</a>
                 <a href="#">Elements</a>
               </div>

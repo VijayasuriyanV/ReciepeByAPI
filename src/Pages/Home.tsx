@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import Card from "../Components/Card";
 import {Api} from "../G_api";
-import {Recipe} from "../types/reciepetypes";
+import {Recipe} from "../types/recipetypes";
 import SlidingBanner from "../Components/SlidingBanner";
 export default function Home() {
   const [data, setData] = useState<Recipe[] | null>(null);

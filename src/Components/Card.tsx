@@ -1,4 +1,4 @@
-import { Recipe } from "../types/reciepetypes"
+import { Recipe } from "../types/recipetypes"
 import "../styles/Card.css"
 import { useNavigate } from "react-router-dom"
 

@@ -1,11 +1,11 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
-import "./ReciepeDetails.css";
+import "./RecipeDetails.css";
 import {Api} from "../G_api";
-import {Recipe} from "../types/reciepetypes";
+import {Recipe} from "../types/recipetypes";
 import {useNavigate} from "react-router-dom";
 
-const ReciepeDetails = () => {
+const RecipeDetails = () => {
   const {id} = useParams();
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [loading, setLoading] = useState(true);
@@ -105,4 +105,4 @@ const ReciepeDetails = () => {
   );
 };
 
-export default ReciepeDetails;
+export default RecipeDetails;
